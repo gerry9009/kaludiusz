@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@600&family=Roboto+Condensed:wght@300;400;700&family=Sono&display=swap");
+:root {
+  --primary-color: #513d2a;
+  --second-color: #a98b6f;
+  --white-color: #f2f2f2;
+  --black-color: #222222;
+  --gray-color: #cccccc;
+}
+
+@font-face {
+  font-family: blanka;
+  src: url(../assets/Blanka-Regular.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Sono", sans-serif;
+  background: var(--white-color);
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}

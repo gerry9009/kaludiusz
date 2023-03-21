@@ -1,0 +1,30 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  z-index: 100;
+  background: var(--primary-color);
+}
+
+.header-logo {
+  font-family: blanka;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--white-color);
+  letter-spacing: 0.5rem;
+}
+
+.header-logo::first-letter {
+  color: var(--second-color);
+  font-size: 1.8rem;
+}
+
+.home-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50vw;
+}
