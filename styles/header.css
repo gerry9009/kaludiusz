@@ -3,10 +3,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  width: 100%;
   z-index: 100;
+  width: 100%;
   background: var(--primary-color);
+  padding: 0 1rem;
 }
 
 .header-logo {
@@ -22,9 +22,22 @@ header {
   font-size: 1.8rem;
 }
 
+.home-nav {
+  width: 50%;
+}
+
 .home-nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 50vw;
+  justify-content: center;
+}
+
+.home-nav li {
+  padding: 1rem;
+  min-width: 2%;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.home-nav li:hover {
+  background: var(--second-color);
 }
