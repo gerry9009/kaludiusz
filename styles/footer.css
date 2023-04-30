@@ -1,0 +1,10 @@
+footer {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: underline;
+}

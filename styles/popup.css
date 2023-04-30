@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-container {
+  width: 70%;
+  max-width: 500px;
+  animation: open 1s;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes open {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(231, 231, 231);
+}
+
+@media screen and (min-width: 992px) {
+  .modal-container {
+    width: 80%;
+    max-width: 550px;
+  }
+}

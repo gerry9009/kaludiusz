@@ -3,10 +3,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  width: 100%;
-  background: var(--primary-color);
+  z-index: 5;
+  right: 0;
+  left: 0;
   padding: 0 1rem;
+  background: var(--primary-color);
 }
 
 .header-logo {
@@ -22,22 +23,129 @@ header {
   font-size: 1.8rem;
 }
 
+.hamburger {
+  width: 32px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 1s all ease;
+}
+
+.hamburger span,
+.hamburger::after,
+.hamburger::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--white-color);
+  border-radius: 3px;
+  transition: all 0.7s ease;
+}
+
+.hamburger:hover::after,
+.hamburger:hover::before {
+  transform: scaleX(0.7);
+}
+
+.hamburger-close::after,
+.hamburger-close::before {
+  transform: scaleX(0.7);
+}
+
 .home-nav {
-  width: 50%;
+  position: absolute;
+  transition: 1s all ease;
+  bottom: -100vh;
+  right: -100%;
+  height: 100vh;
+  width: 100%;
+  min-width: 100px;
+  background-color: var(--second-color);
+}
+
+.nav-open {
+  right: 0;
 }
 
 .home-nav ul {
+  padding-top: 2vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
-.home-nav li {
-  padding: 1rem;
-  min-width: 2%;
-  transition: all 1s ease;
+.home-nav li a {
+  display: block;
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
-.home-nav li:hover {
-  background: var(--second-color);
+.home-nav li a:hover {
+  background: var(--primary-color);
+}
+
+@media screen and (min-width: 576px) {
+  .home-nav {
+    right: -40vw;
+    width: 40vw;
+    min-width: 100px;
+  }
+
+  .nav-open {
+    right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 1.25rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .home-nav {
+    transition: none;
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: var(--primary-color);
+  }
+
+  .home-nav ul {
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-nav li a {
+    padding: 1rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+
+  .home-nav li a:hover {
+    background: var(--second-color);
+  }
+}
+@media screen and (min-width: 992px) {
+  header {
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header {
+    padding: 0 8rem;
+  }
 }
